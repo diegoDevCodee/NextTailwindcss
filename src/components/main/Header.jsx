@@ -27,7 +27,7 @@ function Header() {
               className="text-3xl md:hidden cursor-pointer"
             >
               {menuIcon ? (
-                <BiPlus size={30} className="text-[#f1f1f1] hover:scale-110 rotate-90" />
+                <BiPlus size={30} className="text-[#f1f1f1] hover:scale-110 rotate-45" />
               ) : (
                 <BiMenu size={25} className="text-[#f1f1f1] hover:scale-110" />
               )}
