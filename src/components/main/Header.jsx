@@ -27,7 +27,7 @@ function Header() {
               className="text-3xl md:hidden cursor-pointer"
             >
               {menuIcon ? (
-                <BiPlus size={30} className="text-[#f1f1f1] hover:scale-110 " />
+                <BiPlus size={30} className="text-[#f1f1f1] hover:scale-110 rotate-90" />
               ) : (
                 <BiMenu size={25} className="text-[#f1f1f1] hover:scale-110" />
               )}
@@ -48,55 +48,54 @@ function Header() {
             </nav>
           </div>
         </section>
-        <div>
-          {menuIcon ? (
-            <ul className="bg-slate-200/[0.98] dark:bg-zinc-950/[0.98] text-gray-900 dark:text-slate-200 min-h-screen w-full absolute py-10 font-semibold">
-              <a
-                href="#"
-                onClick={closeMenu}
-                className="cursor-pointer text-2xl sm:text-3xl hover:bg-slate-100/95 hover:text-gray-950 w-full block text-center py-6 uppercase"
-              >
-                Home
-              </a>
-              <a
-                href="#rockets"
-                onClick={closeMenu}
-                className="cursor-pointer text-2xl sm:text-3xl hover:bg-slate-100/95 hover:text-gray-950 w-full block text-center py-6 uppercase"
-              >
-                Our Rockets
-              </a>
-              <a
-                href="#testimonials"
-                onClick={closeMenu}
-                className="cursor-pointer text-2xl sm:text-3xl hover:bg-slate-100/95 hover:text-gray-950 w-full block text-center py-6 uppercase"
-              >
-                Testimonials
-              </a>
-              <a
-                href="#contact"
-                onClick={closeMenu}
-                className="cursor-pointer text-2xl sm:text-3xl hover:bg-slate-100/95 hover:text-gray-950 w-full block text-center py-6 uppercase"
-              >
-                Contact
-              </a>
-              <a
-                href="#"
-                onClick={closeMenu}
-                className="cursor-pointer text-2xl sm:text-3xl hover:bg-slate-100/95 hover:text-gray-950 w-full block text-center py-6 uppercase"
-              >
-                About Us
-              </a>
-              <a
-                href="#"
-                onClick={closeMenu}
-                className="cursor-pointer text-2xl sm:text-3xl hover:bg-slate-100/95 hover:text-gray-950 w-full block text-center py-6 uppercase"
-              >
-                Legal
-              </a>
-            </ul>
-          ) : (
-            <div className="hidden"></div>
-          )}
+
+        <div
+          className={`${
+            menuIcon ? "menu-visible" : "menu-hidden"
+          } bg-slate-200/[0.98] dark:bg-zinc-950/[0.98] text-gray-900 dark:text-slate-200 min-h-screen w-full absolute py-10 font-semibold`}
+        >
+          <a
+            href="#"
+            onClick={closeMenu}
+            className="cursor-pointer text-2xl sm:text-3xl hover:bg-slate-100/95 hover:text-gray-950 w-full block text-center py-6 uppercase"
+          >
+            Home
+          </a>
+          <a
+            href="#rockets"
+            onClick={closeMenu}
+            className="cursor-pointer text-2xl sm:text-3xl hover:bg-slate-100/95 hover:text-gray-950 w-full block text-center py-6 uppercase"
+          >
+            Our Rockets
+          </a>
+          <a
+            href="#testimonials"
+            onClick={closeMenu}
+            className="cursor-pointer text-2xl sm:text-3xl hover:bg-slate-100/95 hover:text-gray-950 w-full block text-center py-6 uppercase"
+          >
+            Testimonials
+          </a>
+          <a
+            href="#contact"
+            onClick={closeMenu}
+            className="cursor-pointer text-2xl sm:text-3xl hover:bg-slate-100/95 hover:text-gray-950 w-full block text-center py-6 uppercase"
+          >
+            Contact
+          </a>
+          <a
+            href="#"
+            onClick={closeMenu}
+            className="cursor-pointer text-2xl sm:text-3xl hover:bg-slate-100/95 hover:text-gray-950 w-full block text-center py-6 uppercase"
+          >
+            About Us
+          </a>
+          <a
+            href="#"
+            onClick={closeMenu}
+            className="cursor-pointer text-2xl sm:text-3xl hover:bg-slate-100/95 hover:text-gray-950 w-full block text-center py-6 uppercase"
+          >
+            Legal
+          </a>
         </div>
       </header>
     </>

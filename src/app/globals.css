@@ -6,4 +6,21 @@
   .section-min-height {
     min-height: calc(100vh - 68px);
   }
+
+  /* Establece el estado inicial para el menú oculto */
+.menu-hidden {
+  opacity: 0;
+  transform: translateY(-100%);
+  visibility: hidden;
+  transition: opacity 0.3s, transform 0.3s, visibility 0s 0.3s;
+}
+
+/* Establece el estado para el menú visible */
+.menu-visible {
+  opacity: 1;
+  transform: translateY(0%);
+  visibility: visible;
+  transition: opacity 0.5s, transform 0.5s, visibility 0.5s;
+}
+
 }
